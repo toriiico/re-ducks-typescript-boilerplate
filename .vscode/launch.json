@@ -9,15 +9,13 @@
       "webRoot": "${workspaceFolder}"
     },
     {
-      "name": "Debug Jest Tests",
+      "name": "Debug CRA Tests",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceRoot}/node_modules/.bin/jest",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
+      "args": ["test", "--runInBand", "--no-cache", "--no-watch"],
+      "cwd": "${workspaceRoot}",
       "protocol": "inspector",
-      "args": ["--runInBand"],
-      "windows": {
-        "program": "${workspaceRoot}/node_modules/jest/bin/jest.js"
-      },
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
     }

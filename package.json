@@ -41,21 +41,25 @@
     "typescript": "3.3.3"
   },
   "devDependencies": {
+    "dotenv": "6.2.0",
     "prettier": "1.16.4",
     "tslint": "5.12.1",
+    "tslint-config-airbnb": "5.11.1",
     "tslint-config-prettier": "1.18.0",
     "tslint-plugin-prettier": "2.0.1",
-    "tslint-react": "3.6.0"
+    "tslint-react": "3.6.0",
+    "tsutils": "3.9.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
     "eject": "react-scripts eject",
     "tslint:prettier-check": "tslint-config-prettier-check ./tslint.json",
-    "tslint": "tslint --fix --force --format stylish --project ./tsconfig.json ./{src,__tests__}/**/*.{ts,tsx}",
-    "prettier": "prettier --write ./{src,__tests__}/**/*.{ts,tsx}",
-    "lint": "npm run tslint",
+    "tslint": "tslint --format stylish --project ./tsconfig.json './src/**/*.ts{,x}'",
+    "prettier": "prettier --write ./src/**/*.ts{,x}",
+    "lint": "npm run tslint && npm run tslint:prettier-check",
     "format": "npm run prettier"
   },
   "eslintConfig": {
