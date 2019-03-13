@@ -3,7 +3,10 @@
   "defaultSeverity": "warning",
   "rules": {
     "prettier": [true, ".prettierrc"],
+    "ordered-imports": true,
     "import-name": false,
-    "variable-name": false
+    "variable-name": false,
+    "jsx-no-lambda": false,
+    "object-shorthand-properties-first": false
   }
 }
