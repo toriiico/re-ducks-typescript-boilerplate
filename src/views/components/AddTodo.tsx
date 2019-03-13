@@ -1,21 +1,24 @@
 import React from "react"
-import { connect } from "react-redux"
-import { todosOperations } from "../../states/ducks/todos"
 
-const AddTodo = (props: any) => {
-  const { dispatch } = props
+interface Props extends React.Props<{}> {
+  addTodo: (value: any) => void
+}
 
-  let input: any
+const Fcomponent: React.FC<Props> = (props: Props) => {
+  const { addTodo } = props
+
+  let input: HTMLInputElement | null
 
   return (
     <div>
       <form
         onSubmit={e => {
           e.preventDefault()
-          if (!input.value.trim()) {
+          if (!input) {
             return
           }
-          dispatch(todosOperations.addTodo(input.value))
+
+          addTodo(input.value)
           input.value = ""
         }}
       >
@@ -30,4 +33,4 @@ const AddTodo = (props: any) => {
   )
 }
 
-export default connect()(AddTodo as any)
+export default Fcomponent

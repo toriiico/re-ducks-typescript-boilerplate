@@ -1,18 +1,17 @@
 import * as React from "react"
 
-interface MainProps extends React.Props<{}> {
+interface Props extends React.Props<{}> {
   onClick: Function
   completed: boolean
   text: string
 }
 
-const Todo = (props: MainProps) => {
+const FComponent: React.FC<Props> = (props: Props) => {
   const { onClick, completed, text } = props
 
   return (
     <li
       onClick={() => {
-        console.log("クリック")
         return onClick()
       }}
       style={{
@@ -24,4 +23,4 @@ const Todo = (props: MainProps) => {
   )
 }
 
-export default Todo
+export default FComponent

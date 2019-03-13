@@ -1,21 +1,12 @@
 import { createStandardAction } from "typesafe-actions"
 
-const ADD_TODO = "ADD_TODO"
-const SET_VISIBILITY_FILTER = "SET_VISIBILITY_FILTER"
-const TOGGLE_TODO = "TOGGLE_TODO"
+import { AddTodoAction } from "./models"
 
 // TODO: uuidとかに変更してこいつどうにかする
 let nextTodoId = 0
 
-interface AddTodoProps {
-  payload: {
-    id: number
-    text: string
-  }
-}
-
-export const addTodo = createStandardAction(ADD_TODO).map(
-  (text: string): AddTodoProps => {
+export const addTodo = createStandardAction("ADD_TODO").map(
+  (text: string): AddTodoAction => {
     nextTodoId += 1
     return {
       payload: {
@@ -26,9 +17,9 @@ export const addTodo = createStandardAction(ADD_TODO).map(
   }
 )
 
-export const setVisibilityFilter = createStandardAction(SET_VISIBILITY_FILTER)<string>()
+export const setVisibilityFilter = createStandardAction("SET_VISIBILITY_FILTER")<string>()
 
-export const toggleTodo = createStandardAction(TOGGLE_TODO)<string>()
+export const toggleTodo = createStandardAction("TOGGLE_TODO")<string>()
 
 export default {
   addTodo,

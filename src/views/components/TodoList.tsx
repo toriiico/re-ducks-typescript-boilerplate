@@ -1,28 +1,23 @@
 import * as React from "react"
 
-import Todo from "./Todo"
+import { Todo } from "../../states/ducks/todos/models"
+import TodoComponent from "./Todo"
 
-interface TodoProps {
-  id: number
-  completed: boolean
-  text: string
-}
-
-interface MainProps extends React.Props<{}> {
-  todos: TodoProps[]
+interface Props extends React.Props<{}> {
+  todos: Todo[]
   onTodoClick: Function
 }
 
-const TodoList = (props: MainProps) => {
+const FComponent: React.FC<Props> = (props: Props) => {
   const { todos, onTodoClick } = props
 
   return (
     <ul>
-      {todos.map((todo: TodoProps) => (
-        <Todo key={todo.id} {...todo} onClick={() => onTodoClick(todo.id)} />
+      {todos.map((todo: Todo) => (
+        <TodoComponent key={todo.id} {...todo} onClick={() => onTodoClick(todo.id)} />
       ))}
     </ul>
   )
 }
 
-export default TodoList
+export default FComponent

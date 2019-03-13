@@ -4,7 +4,7 @@ import { Provider as ReduxProvider } from "react-redux"
 
 import * as serviceWorker from "./serviceWorker"
 import configureStore from "./states/store"
-import App from "./views/App"
+import App from "./views"
 
 const reduxStore = configureStore()
 

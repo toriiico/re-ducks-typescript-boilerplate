@@ -1,23 +1,20 @@
 import { connect } from "react-redux"
 import { Dispatch } from "redux"
-import { todosOperations } from "../../states/ducks/todos"
-import Link from "../components/Link"
+
+import component from "./component"
 
 const mapStateToProps = (state: any, ownProps: any) => {
   return {
-    active: ownProps.filter === state.visibilityFilter,
+    // TODO: add 'app' ducks state and get title
+    title: "Header Title",
   }
 }
 
 const mapDispatchToProps = (dispatch: Dispatch<any>, ownProps: any) => {
-  return {
-    onClick: () => {
-      dispatch(todosOperations.setVisibilityFilter(ownProps.filter))
-    },
-  }
+  return {}
 }
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Link as any)
+)(component as any)
