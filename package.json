@@ -19,8 +19,6 @@
     "url": "https://github.com/toriiico/re-ducks-typescript-material-ui-todos/issues"
   },
   "dependencies": {
-    "@material-ui/core": "3.9.2",
-    "@material-ui/icons": "3.0.2",
     "@types/jest": "24.0.6",
     "@types/node": "11.9.4",
     "@types/react": "16.8.4",
@@ -28,7 +26,6 @@
     "@types/react-redux": "7.0.1",
     "@types/react-router-dom": "4.3.1",
     "@types/redux-thunk": "2.1.0",
-    "material-ui": "0.20.2",
     "react": "16.8.2",
     "react-dom": "16.8.2",
     "react-redux": "6.0.1",
