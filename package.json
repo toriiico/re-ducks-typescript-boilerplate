@@ -1,0 +1,71 @@
+{
+  "name": "re-ducks-typescript-example",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "11.8.0",
+    "npm": "6.8.0"
+  },
+  "author": {
+    "name": "toriiico",
+    "email": "pandeiro.hiitemasu@gmail.com"
+  },
+  "homepage": "https://github.com/toriiico/re-ducks-typescript-example",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toriiico/re-ducks-typescript-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/toriiico/re-ducks-typescript-example/issues"
+  },
+  "dependencies": {
+    "@types/jest": "24.0.6",
+    "@types/node": "11.9.4",
+    "@types/react": "16.8.4",
+    "@types/react-dom": "16.8.2",
+    "@types/react-redux": "7.0.1",
+    "@types/react-router-dom": "4.3.1",
+    "@types/redux-thunk": "2.1.0",
+    "react": "16.8.2",
+    "react-dom": "16.8.2",
+    "react-redux": "6.0.1",
+    "react-router-dom": "4.3.1",
+    "react-scripts": "2.1.5",
+    "redux": "4.0.1",
+    "redux-devtools-extension": "2.13.8",
+    "redux-thunk": "2.3.0",
+    "reselect": "4.0.0",
+    "typesafe-actions": "3.1.0",
+    "typescript": "3.3.3"
+  },
+  "devDependencies": {
+    "prettier": "1.16.4",
+    "tslint": "5.12.1",
+    "tslint-config-airbnb": "5.11.1",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-plugin-prettier": "2.0.1",
+    "tslint-react": "3.6.0",
+    "tsutils": "3.9.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+    "eject": "react-scripts eject",
+    "tslint:prettier-check": "tslint-config-prettier-check ./tslint.json",
+    "tslint": "tslint --format stylish --project ./tsconfig.json './src/**/*.ts{,x}'",
+    "prettier": "prettier --write ./src/**/*.ts{,x}",
+    "lint": "npm run tslint && npm run tslint:prettier-check",
+    "format": "npm run prettier"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#6bc1db"
+  },
+  // format and linting
+  "editor.codeActionsOnSave": {
+    "source.fixAll.tslint": true
+  },
+  "tslint.configFile": "./tslint.json",
+  // prettier
+  "editor.formatOnSave": true,
+  "prettier.semi": false,
+  "prettier.singleQuote": false,
+  "prettier.printWidth": 120,
+  "prettier.trailingComma": "es5"
+}

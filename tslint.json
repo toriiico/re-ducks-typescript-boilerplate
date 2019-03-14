@@ -1,0 +1,12 @@
+{
+  "extends": ["tslint-config-airbnb", "tslint-react", "tslint-plugin-prettier", "tslint-config-prettier"],
+  "defaultSeverity": "warning",
+  "rules": {
+    "prettier": [true, ".prettierrc"],
+    "ordered-imports": true,
+    "import-name": false,
+    "variable-name": false,
+    "jsx-no-lambda": false,
+    "object-shorthand-properties-first": false
+  }
+}
