@@ -39,7 +39,6 @@
     "typescript": "3.3.3"
   },
   "devDependencies": {
-    "dotenv": "6.2.0",
     "prettier": "1.16.4",
     "tslint": "5.12.1",
     "tslint-config-airbnb": "5.11.1",
