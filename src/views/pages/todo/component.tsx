@@ -6,10 +6,10 @@ import TodoList from "../../components/TodoList"
 
 interface Props extends React.Props<{}> {
   // AddTodo
-  todos: any
-  onTodoClick: (id: string) => void
-  // TodoList
   addTodo: (text: string) => void
+  // TodoList
+  todos: any
+  onTodoClick: (id: number) => void
   // FilterList
   active: boolean
   visibilityFilter: string

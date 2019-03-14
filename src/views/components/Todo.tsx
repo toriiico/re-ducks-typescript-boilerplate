@@ -11,9 +11,7 @@ const FComponent: React.FC<Props> = (props: Props) => {
 
   return (
     <li
-      onClick={() => {
-        return onClick()
-      }}
+      onClick={() => onClick()}
       style={{
         textDecoration: completed ? "line-through" : "none",
       }}

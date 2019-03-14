@@ -5,7 +5,7 @@ import TodoComponent from "./Todo"
 
 interface Props extends React.Props<{}> {
   todos: Todo[]
-  onTodoClick: Function
+  onTodoClick: (id: number) => void
 }
 
 const FComponent: React.FC<Props> = (props: Props) => {

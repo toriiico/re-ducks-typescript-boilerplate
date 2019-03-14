@@ -4,8 +4,9 @@ import { PayloadAction } from "typesafe-actions/dist/types"
 
 import actions from "./actions"
 import CONSTANTS from "./constants"
+import { Todo } from "./models"
 
-const todo = (state: any, action: PayloadAction<any, any>) => {
+const todo = (state: any, action: PayloadAction<string, any>) => {
   switch (action.type) {
     case getType(actions.addTodo):
       return {
@@ -27,8 +28,7 @@ const todo = (state: any, action: PayloadAction<any, any>) => {
   }
 }
 
-// TODO: return any をどうにかする
-const todos = (state: any = [], action: PayloadAction<any, any>): any => {
+const todos = (state: Todo[] = [], action: PayloadAction<string, Todo[]>) => {
   switch (action.type) {
     case getType(actions.addTodo):
       return [...state, todo(undefined, action)]
@@ -39,7 +39,7 @@ const todos = (state: any = [], action: PayloadAction<any, any>): any => {
   }
 }
 
-const visibilityFilter = (state = CONSTANTS.SHOW_ALL, action: PayloadAction<any, any>) => {
+const visibilityFilter = (state: string = CONSTANTS.SHOW_ALL, action: PayloadAction<string, string>) => {
   switch (action.type) {
     case getType(actions.setVisibilityFilter):
       return action.payload
