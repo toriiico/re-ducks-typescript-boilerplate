@@ -10,30 +10,28 @@ const Fcomponent: React.FC<Props> = (props: Props) => {
 
   const FilterLink = (filter: string, text: string) => {
     if (visibilityFilter === filter) {
-      return <span>{text}</span>
+      return <button disabled={true}>{text}</button>
     }
 
     return (
-      <a
-        href="#"
-        onClick={e => {
+      <button
+        onClick={(e: any) => {
           e.preventDefault()
           onFilterClick(filter)
         }}
       >
         {text}
-      </a>
+      </button>
     )
   }
 
   return (
-    <p>
-      Show: {FilterLink("SHOW_ALL", "All")}
-      {", "}
+    <div>
+      <span>Show: </span>
+      {FilterLink("SHOW_ALL", "All")}
       {FilterLink("SHOW_ACTIVE", "Active")}
-      {", "}
       {FilterLink("SHOW_COMPLETED", "Completed")}
-    </p>
+    </div>
   )
 }
 
