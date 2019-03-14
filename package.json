@@ -1,5 +1,5 @@
 {
-  "name": "re-ducks-typescript-todos",
+  "name": "re-ducks-typescript-example",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -10,13 +10,13 @@
     "name": "toriiico",
     "email": "pandeiro.hiitemasu@gmail.com"
   },
-  "homepage": "https://github.com/toriiico/re-ducks-typescript-todos",
+  "homepage": "https://github.com/toriiico/re-ducks-typescript-example",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/toriiico/re-ducks-typescript-todos.git"
+    "url": "git+https://github.com/toriiico/re-ducks-typescript-example.git"
   },
   "bugs": {
-    "url": "https://github.com/toriiico/re-ducks-typescript-todos/issues"
+    "url": "https://github.com/toriiico/re-ducks-typescript-example/issues"
   },
   "dependencies": {
     "@types/jest": "24.0.6",
@@ -39,7 +39,6 @@
     "typescript": "3.3.3"
   },
   "devDependencies": {
-    "dotenv": "6.2.0",
     "prettier": "1.16.4",
     "tslint": "5.12.1",
     "tslint-config-airbnb": "5.11.1",

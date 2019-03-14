@@ -2,9 +2,10 @@ import { connect } from "react-redux"
 import { Dispatch } from "redux"
 
 import { todosOperations, todosSelectors } from "../../../states/ducks/todos"
+import { StateAll } from "../../../states/ducks/types"
 import component from "./component"
 
-const mapStateToProps = (state: any, ownProps: any) => {
+const mapStateToProps = (state: StateAll, ownProps: any) => {
   return {
     todos: todosSelectors.getVisibleTodos(state.todosState),
     visibilityFilter: todosSelectors.getVisibilityFilter(state.todosState),

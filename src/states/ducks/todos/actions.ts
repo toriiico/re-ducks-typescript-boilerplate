@@ -2,7 +2,6 @@ import { createStandardAction } from "typesafe-actions"
 
 import { AddTodoAction } from "./models"
 
-// TODO: uuidとかに変更してこいつどうにかする
 let nextTodoId = 0
 
 export const addTodo = createStandardAction("ADD_TODO").map(

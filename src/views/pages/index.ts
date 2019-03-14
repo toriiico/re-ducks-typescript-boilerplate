@@ -1,9 +1,10 @@
 import { connect } from "react-redux"
 import { Dispatch } from "redux"
 
+import { StateAll } from "../../states/ducks/types"
 import component from "./component"
 
-const mapStateToProps = (state: any, ownProps: any) => {
+const mapStateToProps = (state: StateAll, ownProps: any) => {
   return {
     // TODO: add 'app' ducks state and get title
     title: "Header Title",
