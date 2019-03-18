@@ -1,5 +1,5 @@
 {
-  "name": "re-ducks-typescript-example",
+  "name": "re-ducks-typescript-boilerplate",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -10,13 +10,13 @@
     "name": "toriiico",
     "email": "pandeiro.hiitemasu@gmail.com"
   },
-  "homepage": "https://github.com/toriiico/re-ducks-typescript-example",
+  "homepage": "https://github.com/toriiico/re-ducks-typescript-boilerplate",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/toriiico/re-ducks-typescript-example.git"
+    "url": "git+https://github.com/toriiico/re-ducks-typescript-boilerplate.git"
   },
   "bugs": {
-    "url": "https://github.com/toriiico/re-ducks-typescript-example/issues"
+    "url": "https://github.com/toriiico/re-ducks-typescript-boilerplate/issues"
   },
   "dependencies": {
     "@types/jest": "24.0.6",

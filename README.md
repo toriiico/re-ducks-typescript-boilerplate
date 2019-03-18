@@ -2,7 +2,7 @@
 
 This project is a practical sample that replaces [Redux todo app example](https://github.com/reduxjs/redux/tree/master/examples/todos) with typescript and Re-ducks pattern, and adds router, typesafe-actions, etc.
 
-The structure of the state etc. is referring to [this awesome Re-ducks project](https://github.com/jthegedus/re-ducks-examples/tree/master/re-ducks-todos).
+The structure of the state etc. is referring to [this awesome Re-ducks project](https://github.com/jthegedus/re-ducks-boilerplates/tree/master/re-ducks-todos).
 
 It is created based on [Create React App](https://github.com/facebook/create-react-app).
 
@@ -18,8 +18,8 @@ It is created based on [Create React App](https://github.com/facebook/create-rea
 ## Start Todos App
 
 ```bash
-git clone https://github.com/toriiico/re-ducks-typescript-example.git
+git clone https://github.com/toriiico/re-ducks-typescript-boilerplate.git
 
-cd re-ducks-typescript-example
+cd re-ducks-typescript-boilerplate
 npm i && npm start
 ```
