@@ -1,10 +1,9 @@
-// visibility Filter Constants
-const SHOW_ALL = "SHOW_ALL"
-const SHOW_COMPLETED = "SHOW_COMPLETED"
-const SHOW_ACTIVE = "SHOW_ACTIVE"
+export const VISIBILITY_FILTER = {
+  SHOW_ALL: "SHOW_ALL",
+  SHOW_ACTIVE: "SHOW_ACTIVE",
+  SHOW_COMPLETED: "SHOW_COMPLETED",
+}
 
 export default {
-  SHOW_ALL,
-  SHOW_COMPLETED,
-  SHOW_ACTIVE,
+  VISIBILITY_FILTER,
 }

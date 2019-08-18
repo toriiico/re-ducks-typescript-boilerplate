@@ -4,7 +4,7 @@ interface Props extends React.Props<{}> {
   title: string
 }
 
-const FComponent: React.FC<Props> = (props: Props) => {
+const Component: React.FC<Props> = (props: Props) => {
   const { title } = props
 
   return (
@@ -15,4 +15,4 @@ const FComponent: React.FC<Props> = (props: Props) => {
   )
 }
 
-export default FComponent
+export default Component

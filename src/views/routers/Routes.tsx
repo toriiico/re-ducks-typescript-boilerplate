@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Route, Switch } from "react-router-dom"
+import { Redirect, Route, Switch } from "react-router-dom"
 
 import Home from "../pages"
 import Todo from "../pages/todo"
@@ -8,7 +8,7 @@ interface MainProps extends React.Props<{}> {}
 
 type Props = MainProps
 
-const FComponent: React.FC<Props> = (props: Props) => {
+const Component: React.FC<Props> = (props: Props) => {
   return (
     <Switch>
       {/* Home */}
@@ -16,8 +16,10 @@ const FComponent: React.FC<Props> = (props: Props) => {
 
       {/* Todo app */}
       <Route exact={true} path="/todo" render={(_props: any) => <Todo {..._props} />} />
+
+      <Redirect to="/" />
     </Switch>
   )
 }
 
-export default FComponent
+export default Component

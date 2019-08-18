@@ -1,17 +1,17 @@
 import * as React from "react"
 
 interface Props extends React.Props<{}> {
-  onClick: Function
+  onClick: () => void
   completed: boolean
   text: string
 }
 
-const FComponent: React.FC<Props> = (props: Props) => {
+const Component: React.FC<Props> = (props: Props) => {
   const { onClick, completed, text } = props
 
   return (
     <li
-      onClick={() => onClick()}
+      onClick={onClick}
       style={{
         textDecoration: completed ? "line-through" : "none",
       }}
@@ -21,4 +21,4 @@ const FComponent: React.FC<Props> = (props: Props) => {
   )
 }
 
-export default FComponent
+export default Component

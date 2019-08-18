@@ -3,12 +3,13 @@ import * as React from "react"
 import AddTodo from "../../components/AddTodo"
 import FilterList from "../../components/FilterList"
 import TodoList from "../../components/TodoList"
+import { Todo } from "../../../states/ducks/todos/models"
 
 interface Props extends React.Props<{}> {
   // AddTodo
   addTodo: (text: string) => void
   // TodoList
-  todos: any
+  todos: Todo[]
   onTodoClick: (id: number) => void
   // FilterList
   active: boolean
@@ -16,7 +17,7 @@ interface Props extends React.Props<{}> {
   onFilterClick: (filter: string) => void
 }
 
-const FComponent: React.FC<Props> = (props: Props) => {
+const Component: React.FC<Props> = (props: Props) => {
   return (
     <React.Fragment>
       <h2>Todo App</h2>
@@ -27,4 +28,4 @@ const FComponent: React.FC<Props> = (props: Props) => {
   )
 }
 
-export default FComponent
+export default Component

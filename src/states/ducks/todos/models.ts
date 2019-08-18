@@ -9,9 +9,8 @@ export interface TodosState {
   visibilityFilter: string
 }
 
-export interface AddTodoAction {
-  payload: {
-    id: number
-    text: string
-  }
+export const initTodo: Todo = {
+  id: -1,
+  text: "",
+  completed: false,
 }

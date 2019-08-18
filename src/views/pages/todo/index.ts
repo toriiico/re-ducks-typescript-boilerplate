@@ -3,18 +3,18 @@ import { Dispatch } from "redux"
 
 import { todosOperations, todosSelectors } from "../../../states/ducks/todos"
 import { StateAll } from "../../../states/ducks/types"
-import component from "./component"
+import Component from "./Component"
 
 const mapStateToProps = (state: StateAll, ownProps: any) => {
   return {
-    todos: todosSelectors.getVisibleTodos(state.todosState),
-    visibilityFilter: todosSelectors.getVisibilityFilter(state.todosState),
+    todos: todosSelectors.getVisibleTodos(state),
+    visibilityFilter: todosSelectors.getVisibilityFilter(state),
   }
 }
 
 const mapDispatchToProps = (dispatch: Dispatch<any>, ownProps: any) => {
   return {
-    onTodoClick: (id: string) => {
+    onTodoClick: (id: number) => {
       dispatch(todosOperations.toggleTodo(id))
     },
     addTodo: (text: string) => {
@@ -29,4 +29,4 @@ const mapDispatchToProps = (dispatch: Dispatch<any>, ownProps: any) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(component as any)
+)(Component)
