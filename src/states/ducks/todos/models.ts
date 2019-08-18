@@ -9,9 +9,7 @@ export interface TodosState {
   visibilityFilter: string
 }
 
-export interface AddTodoAction {
-  payload: {
-    id: number
-    text: string
-  }
+export interface AddTodo {
+  id: number
+  text: string
 }
