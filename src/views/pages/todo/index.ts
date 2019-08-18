@@ -7,8 +7,8 @@ import component from "./component"
 
 const mapStateToProps = (state: StateAll, ownProps: any) => {
   return {
-    todos: todosSelectors.getVisibleTodos(state.todosState),
-    visibilityFilter: todosSelectors.getVisibilityFilter(state.todosState),
+    todos: todosSelectors.getVisibleTodos(state),
+    visibilityFilter: todosSelectors.getVisibilityFilter(state),
   }
 }
 

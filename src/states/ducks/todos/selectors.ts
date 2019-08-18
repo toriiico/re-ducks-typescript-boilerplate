@@ -1,10 +1,11 @@
 import { createSelector, Selector } from "reselect"
 
+import { StateAll } from "../types"
 import CONSTANTS from "./constants"
 import { Todo, TodosState } from "./models"
 
-const rootSelector: Selector<TodosState, TodosState> = (state: TodosState) => state
-const visivilityFilterSelector: Selector<TodosState, string> = (state: TodosState) => state.visibilityFilter
+const rootSelector: Selector<StateAll, TodosState> = (state: StateAll) => state.todos
+const visivilityFilterSelector: Selector<StateAll, string> = (state: StateAll) => state.todos.visibilityFilter
 
 const getVisibleTodos = createSelector(
   rootSelector,
