@@ -29,4 +29,4 @@ const mapDispatchToProps = (dispatch: Dispatch<any>, ownProps: any) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(component as any)
+)(component)
