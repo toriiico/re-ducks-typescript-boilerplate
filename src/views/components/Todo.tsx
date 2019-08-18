@@ -1,7 +1,7 @@
 import * as React from "react"
 
 interface Props extends React.Props<{}> {
-  onClick: Function
+  onClick: () => void
   completed: boolean
   text: string
 }
@@ -11,7 +11,7 @@ const Component: React.FC<Props> = (props: Props) => {
 
   return (
     <li
-      onClick={() => onClick()}
+      onClick={onClick}
       style={{
         textDecoration: completed ? "line-through" : "none",
       }}

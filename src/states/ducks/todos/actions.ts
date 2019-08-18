@@ -1,12 +1,11 @@
 import { createStandardAction } from "typesafe-actions"
 
-import { AddTodo } from "./models"
+import { TodosState } from "./models"
 
-export const addTodo = createStandardAction("ADD_TODO")<AddTodo>()
+export const addTodo = createStandardAction("ADD_TODO")<TodosState["todos"]>()
+export const toggleTodo = createStandardAction("TOGGLE_TODO")<TodosState["todos"]>()
 
-export const setVisibilityFilter = createStandardAction("SET_VISIBILITY_FILTER")<string>()
-
-export const toggleTodo = createStandardAction("TOGGLE_TODO")<string>()
+export const setVisibilityFilter = createStandardAction("SET_VISIBILITY_FILTER")<TodosState["visibilityFilter"]>()
 
 export default {
   addTodo,

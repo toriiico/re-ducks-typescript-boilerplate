@@ -1,38 +1,47 @@
 import React from "react"
 
-interface Props extends React.Props<{}> {
+import { VISIBILITY_FILTER } from "../../states/ducks/todos/constants"
+import FiliterLink from "./FilterLink"
+
+type Props = React.Props<{}> & {
   visibilityFilter: string
   onFilterClick: (filter: string) => void
 }
 
-const Fcomponent: React.FC<Props> = (props: Props) => {
+const Component: React.FC<Props> = (props: Props) => {
   const { visibilityFilter, onFilterClick } = props
 
-  const FilterLink = (filter: string, text: string) => {
-    if (visibilityFilter === filter) {
-      return <button disabled={true}>{text}</button>
-    }
+  const handleClick = (filter: string) => {
+    onFilterClick(filter)
+  }
 
-    return (
-      <button
-        onClick={(e: any) => {
-          e.preventDefault()
-          onFilterClick(filter)
-        }}
-      >
-        {text}
-      </button>
-    )
+  const getText = (filter: string) => {
+    switch (filter) {
+      case VISIBILITY_FILTER.SHOW_ALL:
+        return "All"
+      case VISIBILITY_FILTER.SHOW_ACTIVE:
+        return "Active"
+      case VISIBILITY_FILTER.SHOW_COMPLETED:
+        return "Completed"
+      default:
+        return "None"
+    }
   }
 
   return (
     <div>
       <span>Show: </span>
-      {FilterLink("SHOW_ALL", "All")}
-      {FilterLink("SHOW_ACTIVE", "Active")}
-      {FilterLink("SHOW_COMPLETED", "Completed")}
+      {Object.values(VISIBILITY_FILTER).map(filter => (
+        <FiliterLink
+          key={filter}
+          filter={filter}
+          text={getText(filter)}
+          disabled={visibilityFilter === filter}
+          onClick={handleClick}
+        />
+      ))}
     </div>
   )
 }
 
-export default Fcomponent
+export default Component

@@ -1,36 +1,32 @@
 import React from "react"
 
-interface Props extends React.Props<{}> {
-  addTodo: (value: any) => void
+type Props = React.Props<{}> & {
+  addTodo: (value: string) => void
 }
 
-const Fcomponent: React.FC<Props> = (props: Props) => {
+const Component: React.FC<Props> = (props: Props) => {
   const { addTodo } = props
 
-  let input: HTMLInputElement | null
+  const inputEl = React.useRef<HTMLInputElement>(null)
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    if (!inputEl) {
+      return
+    }
+
+    addTodo(inputEl.current!.value)
+    inputEl.current!.value = ""
+  }
 
   return (
     <div>
-      <form
-        onSubmit={e => {
-          e.preventDefault()
-          if (!input) {
-            return
-          }
-
-          addTodo(input.value)
-          input.value = ""
-        }}
-      >
-        <input
-          ref={node => {
-            input = node
-          }}
-        />
+      <form onSubmit={handleSubmit}>
+        <input ref={inputEl} />
         <button type="submit">Add Todo</button>
       </form>
     </div>
   )
 }
 
-export default Fcomponent
+export default Component

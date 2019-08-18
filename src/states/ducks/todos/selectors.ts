@@ -1,11 +1,18 @@
 import { createSelector, Selector } from "reselect"
 
 import { StateAll } from "../types"
-import CONSTANTS from "./constants"
+import { VISIBILITY_FILTER } from "./constants"
 import { Todo, TodosState } from "./models"
 
 export const rootSelector: Selector<StateAll, TodosState> = (state: StateAll) => state.todos
 export const visivilityFilterSelector: Selector<StateAll, string> = (state: StateAll) => state.todos.visibilityFilter
+
+const getTodos = createSelector(
+  rootSelector,
+  (state: TodosState) => {
+    return state.todos
+  }
+)
 
 const getVisibleTodos = createSelector(
   rootSelector,
@@ -14,11 +21,11 @@ const getVisibleTodos = createSelector(
     const filter = state.visibilityFilter
 
     switch (filter) {
-      case CONSTANTS.SHOW_ALL:
+      case VISIBILITY_FILTER.SHOW_ALL:
         return todos
-      case CONSTANTS.SHOW_COMPLETED:
+      case VISIBILITY_FILTER.SHOW_COMPLETED:
         return todos.filter((todo: Todo) => todo.completed)
-      case CONSTANTS.SHOW_ACTIVE:
+      case VISIBILITY_FILTER.SHOW_ACTIVE:
         return todos.filter((todo: Todo) => !todo.completed)
       default:
         throw new Error(`Unknown filter: ${filter}`)
@@ -32,6 +39,7 @@ const getVisibilityFilter = createSelector(
 )
 
 export default {
+  getTodos,
   getVisibleTodos,
   getVisibilityFilter,
 }
