@@ -4,9 +4,9 @@ import { PayloadAction } from "typesafe-actions/dist/types"
 
 import actions from "./actions"
 import CONSTANTS from "./constants"
-import { Todo } from "./models"
+import { initTodo, Todo } from "./models"
 
-const todo = (state: any, action: PayloadAction<string, any>) => {
+const todo = (state: Todo = initTodo, action: PayloadAction<string, any>) => {
   switch (action.type) {
     case getType(actions.addTodo):
       return {

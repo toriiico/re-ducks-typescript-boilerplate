@@ -13,3 +13,9 @@ export interface AddTodo {
   id: number
   text: string
 }
+
+export const initTodo: Todo = {
+  id: -1,
+  text: "",
+  completed: false,
+}
