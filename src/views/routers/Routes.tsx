@@ -8,7 +8,7 @@ interface MainProps extends React.Props<{}> {}
 
 type Props = MainProps
 
-const FComponent: React.FC<Props> = (props: Props) => {
+const Component: React.FC<Props> = (props: Props) => {
   return (
     <Switch>
       {/* Home */}
@@ -22,4 +22,4 @@ const FComponent: React.FC<Props> = (props: Props) => {
   )
 }
 
-export default FComponent
+export default Component

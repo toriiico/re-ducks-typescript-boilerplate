@@ -3,7 +3,7 @@ import { Dispatch } from "redux"
 
 import { todosOperations, todosSelectors } from "../../../states/ducks/todos"
 import { StateAll } from "../../../states/ducks/types"
-import component from "./component"
+import Component from "./Component"
 
 const mapStateToProps = (state: StateAll, ownProps: any) => {
   return {
@@ -29,4 +29,4 @@ const mapDispatchToProps = (dispatch: Dispatch<any>, ownProps: any) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(component)
+)(Component)

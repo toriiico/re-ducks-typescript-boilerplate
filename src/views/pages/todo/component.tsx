@@ -16,7 +16,7 @@ interface Props extends React.Props<{}> {
   onFilterClick: (filter: string) => void
 }
 
-const FComponent: React.FC<Props> = (props: Props) => {
+const Component: React.FC<Props> = (props: Props) => {
   return (
     <React.Fragment>
       <h2>Todo App</h2>
@@ -27,4 +27,4 @@ const FComponent: React.FC<Props> = (props: Props) => {
   )
 }
 
-export default FComponent
+export default Component

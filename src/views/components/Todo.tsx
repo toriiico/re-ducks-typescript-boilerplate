@@ -6,7 +6,7 @@ interface Props extends React.Props<{}> {
   text: string
 }
 
-const FComponent: React.FC<Props> = (props: Props) => {
+const Component: React.FC<Props> = (props: Props) => {
   const { onClick, completed, text } = props
 
   return (
@@ -21,4 +21,4 @@ const FComponent: React.FC<Props> = (props: Props) => {
   )
 }
 
-export default FComponent
+export default Component

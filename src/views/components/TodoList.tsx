@@ -8,7 +8,7 @@ interface Props extends React.Props<{}> {
   onTodoClick: (id: number) => void
 }
 
-const FComponent: React.FC<Props> = (props: Props) => {
+const Component: React.FC<Props> = (props: Props) => {
   const { todos, onTodoClick } = props
 
   return (
@@ -20,4 +20,4 @@ const FComponent: React.FC<Props> = (props: Props) => {
   )
 }
 
-export default FComponent
+export default Component
